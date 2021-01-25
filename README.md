@@ -49,9 +49,9 @@ class User(Entity[UserId]):
 Entity class.
 Classes implementing this class must implement abstract method `_ref_()`.
 
-This class is hashable and satisfies the following conditions:
+This class is hashable, satisfying the following conditions:
 
-- `entity1 == entity2 iff entity1._ref_() == entity2._ref_()`
+- `entity1 == entity2` iff `entity1._ref_() == entity2._ref_()`
 - `hash(entity) == hash(entity._ref_())`
 
 where entity, entity1, entity2 are entities.
