@@ -8,7 +8,7 @@ class Entity(ABC, Generic[T], Hashable):
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Entity):
             return False
-        return self._ref_() == other._ref_()
+        return bool(self._ref_() == other._ref_())
 
     def __hash__(self) -> int:
         return hash(self._ref_())
